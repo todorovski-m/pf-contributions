@@ -1,0 +1,449 @@
+components INFO: case_file = case9
+components INFO: Solve the power flow
+
+components INFO: Total P gens     319.641 MW
+components INFO: Total P load     315.000 MW
+components INFO: Total P losses     4.641 MW
+
+components INFO: Total Q gens      22.840 Mvar
+components INFO: Total Q shunts     0.000 Mvar
+components INFO: Total Q load     115.000 Mvar
+components INFO: Total Q losses   -92.160 Mvar
+
+components INFO: Read bus coordinates
+components INFO: Calculate active power flow components
+makeAPFC INFO: Starting ...
+makeActiveFlows INFO: Swap branch orientation when both PF and PT are negative (4)
+makeActiveFlows DEBUG: Before swap
+   F_BUS  T_BUS       PF       PT
+2      5      6  -59.463  -60.817
+5      7      8  -75.905  -76.380
+6      8      2 -163.000 -163.000
+8      9      4  -40.680  -40.937
+makeActiveFlows DEBUG: After swap
+   F_BUS  T_BUS       PF       PT
+2      6      5   60.817   59.463
+5      8      7   76.380   75.905
+6      2      8  163.000  163.000
+8      4      9   40.937   40.680
+makeAPFC DEBUG: =============== Sets A and B ===============
+makeAPFC DEBUG: A[1] = {'E1': {'P': 71.64102147448234, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[1] = {'G1': {'P': 71.64102147448234, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[2] = {'E7': {'P': 163.0, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[2] = {'G2': {'P': 163.0, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[3] = {'E4': {'P': 85.0, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[3] = {'G3': {'P': 85.0, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[4] = {'E2': {'P': 30.703669762307918, 'side': 'PF', 'sign': 1}, 'E9': {'P': 40.93735171217393, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[4] = {'E1': {'P': 71.64102147448234, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[5] = {'L5': {'P': 90.0, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[5] = {'E2': {'P': 30.53726287414006, 'side': 'PT', 'sign': 1}, 'E3': {'P': 59.46273712586018, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[6] = {'E3': {'P': 60.816585977109426, 'side': 'PF', 'sign': 1}, 'E5': {'P': 24.183414022891114, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[6] = {'E4': {'P': 85.0, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[7] = {'L7': {'P': 100.0, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[7] = {'E5': {'P': 24.095417457392525, 'side': 'PT', 'sign': 1}, 'E6': {'P': 75.90458254260807, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[8] = {'E6': {'P': 76.37986616683597, 'side': 'PF', 'sign': 1}, 'E8': {'P': 86.6201338331656, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[8] = {'E7': {'P': 163.0, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: A[9] = {'L9': {'P': 125.0, 'side': 'PF', 'sign': 1}}
+makeAPFC DEBUG: B[9] = {'E8': {'P': 84.3201625184497, 'side': 'PT', 'sign': 1}, 'E9': {'P': 40.67983748155057, 'side': 'PT', 'sign': 1}}
+
+makeAPFC DEBUG: =======================================================
+makeAPFC DEBUG: Initial known components: ['G1', 'G2', 'G3']
+makeAPFC DEBUG: ========== Start of iteration 1 ==========
+makeAPFC DEBUG: Processing bus k = 1
+makeAPFC DEBUG: B[1]: ['G1'], [71.64102147448234], ['PT'], [1], sum(P) = 71.64102147448234
+makeAPFC DEBUG: A[1]: ['E1'], [71.64102147448234], ['PF'], [1], sum(P) = 71.64102147448234
+makeAPFC DEBUG: outflow: E1_PF (1-4)
+makeAPFC DEBUG: f = 71.64102147448234/71.64102147448234 = 1.0
+makeAPFC DEBUG: inflow: G1.G1 = 71.64102147448234, CP = 71.64102147448234 --> component for: E1_PF.G1 (1-4)
+makeAPFC DEBUG: P_other_side = 71.64102147448234 --> component for: E1_PT.G1
+makeAPFC DEBUG: Processing bus k = 2
+makeAPFC DEBUG: B[2]: ['G2'], [163.0], ['PT'], [1], sum(P) = 163.0
+makeAPFC DEBUG: A[2]: ['E7'], [163.0], ['PF'], [1], sum(P) = 163.0
+makeAPFC DEBUG: outflow: E7_PF (2-8)
+makeAPFC DEBUG: f = 163.0/163.0 = 1.0
+makeAPFC DEBUG: inflow: G2.G2 = 163.0, CP = 163.0 --> component for: E7_PF.G2 (2-8)
+makeAPFC DEBUG: P_other_side = 163.0 --> component for: E7_PT.G2
+makeAPFC DEBUG: Processing bus k = 3
+makeAPFC DEBUG: B[3]: ['G3'], [85.0], ['PT'], [1], sum(P) = 85.0
+makeAPFC DEBUG: A[3]: ['E4'], [85.0], ['PF'], [1], sum(P) = 85.0
+makeAPFC DEBUG: outflow: E4_PF (3-6)
+makeAPFC DEBUG: f = 85.0/85.0 = 1.0
+makeAPFC DEBUG: inflow: G3.G3 = 85.0, CP = 85.0 --> component for: E4_PF.G3 (3-6)
+makeAPFC DEBUG: P_other_side = 85.0 --> component for: E4_PT.G3
+makeAPFC DEBUG: Processing bus k = 4
+makeAPFC DEBUG: B[4]: ['E1'], [71.64102147448234], ['PT'], [1], sum(P) = 71.64102147448234
+makeAPFC DEBUG: A[4]: ['E2', 'E9'], [30.703669762307918, 40.93735171217393], ['PF', 'PF'], [1, 1], sum(P) = 71.64102147448185
+makeAPFC DEBUG: outflow: E2_PF (4-5)
+makeAPFC DEBUG: f = 30.703669762307918/71.64102147448234 = 0.4285766608345219
+makeAPFC DEBUG: inflow: E1.G1 = 71.64102147448234, CP = 30.703669762307918 --> component for: E2_PF.G1 (4-5)
+makeAPFC DEBUG: P_other_side = 30.53726287414006 --> component for: E2_PT.G1
+makeAPFC DEBUG: outflow: E9_PF (4-9)
+makeAPFC DEBUG: f = 40.93735171217393/71.64102147448234 = 0.5714233391654712
+makeAPFC DEBUG: inflow: E1.G1 = 71.64102147448234, CP = 40.93735171217393 --> component for: E9_PF.G1 (4-9)
+makeAPFC DEBUG: P_other_side = 40.67983748155057 --> component for: E9_PT.G1
+makeAPFC DEBUG: Processing bus k = 5
+makeAPFC DEBUG:     not all APFC known, skipping ...
+makeAPFC DEBUG: Processing bus k = 6
+makeAPFC DEBUG: B[6]: ['E4'], [85.0], ['PT'], [1], sum(P) = 85.0
+makeAPFC DEBUG: A[6]: ['E3', 'E5'], [60.816585977109426, 24.183414022891114], ['PF', 'PF'], [1, 1], sum(P) = 85.00000000000054
+makeAPFC DEBUG: outflow: E3_PF (6-5)
+makeAPFC DEBUG: f = 60.816585977109426/85.0 = 0.7154892467895226
+makeAPFC DEBUG: inflow: E4.G3 = 85.0, CP = 60.816585977109426 --> component for: E3_PF.G3 (6-5)
+makeAPFC DEBUG: P_other_side = 59.46273712586018 --> component for: E3_PT.G3
+makeAPFC DEBUG: outflow: E5_PF (6-7)
+makeAPFC DEBUG: f = 24.183414022891114/85.0 = 0.2845107532104837
+makeAPFC DEBUG: inflow: E4.G3 = 85.0, CP = 24.183414022891114 --> component for: E5_PF.G3 (6-7)
+makeAPFC DEBUG: P_other_side = 24.095417457392525 --> component for: E5_PT.G3
+makeAPFC DEBUG: Processing bus k = 7
+makeAPFC DEBUG:     not all APFC known, skipping ...
+makeAPFC DEBUG: Processing bus k = 8
+makeAPFC DEBUG: B[8]: ['E7'], [163.0], ['PT'], [1], sum(P) = 163.0
+makeAPFC DEBUG: A[8]: ['E6', 'E8'], [76.37986616683597, 86.6201338331656], ['PF', 'PF'], [1, 1], sum(P) = 163.00000000000156
+makeAPFC DEBUG: outflow: E6_PF (8-7)
+makeAPFC DEBUG: f = 76.37986616683597/163.0 = 0.4685881359928587
+makeAPFC DEBUG: inflow: E7.G2 = 163.0, CP = 76.37986616683597 --> component for: E6_PF.G2 (8-7)
+makeAPFC DEBUG: P_other_side = 75.90458254260807 --> component for: E6_PT.G2
+makeAPFC DEBUG: outflow: E8_PF (8-9)
+makeAPFC DEBUG: f = 86.6201338331656/163.0 = 0.5314118640071509
+makeAPFC DEBUG: inflow: E7.G2 = 163.0, CP = 86.6201338331656 --> component for: E8_PF.G2 (8-9)
+makeAPFC DEBUG: P_other_side = 84.3201625184497 --> component for: E8_PT.G2
+makeAPFC DEBUG: Processing bus k = 9
+makeAPFC DEBUG: B[9]: ['E8', 'E9'], [84.3201625184497, 40.67983748155057], ['PT', 'PT'], [1, 1], sum(P) = 125.00000000000028
+makeAPFC DEBUG: A[9]: ['L9'], [125.0], ['PF'], [1], sum(P) = 125.0
+makeAPFC DEBUG: outflow: L9_PF (9-0)
+makeAPFC DEBUG: f = 125.0/125.00000000000028 = 0.9999999999999978
+makeAPFC DEBUG: inflow: E9.G1 = 40.67983748155057, CP = 40.67983748155048 --> component for: L9_PF.G1 (9-0)
+makeAPFC DEBUG: P_other_side = 40.67983748155048 --> component for: L9_PT.G1
+makeAPFC DEBUG: inflow: E8.G2 = 84.3201625184497, CP = 84.32016251844952 --> component for: L9_PF.G2 (9-0)
+makeAPFC DEBUG: P_other_side = 84.32016251844952 --> component for: L9_PT.G2
+makeAPFC INFO: iter = 1, time = 0.002
+makeAPFC DEBUG: ========== Start of iteration 2 ==========
+makeAPFC DEBUG: Processing bus k = 5
+makeAPFC DEBUG: B[5]: ['E2', 'E3'], [30.53726287414006, 59.46273712586018], ['PT', 'PT'], [1, 1], sum(P) = 90.00000000000024
+makeAPFC DEBUG: A[5]: ['L5'], [90.0], ['PF'], [1], sum(P) = 90.0
+makeAPFC DEBUG: outflow: L5_PF (5-0)
+makeAPFC DEBUG: f = 90.0/90.00000000000024 = 0.9999999999999973
+makeAPFC DEBUG: inflow: E2.G1 = 30.53726287414006, CP = 30.537262874139977 --> component for: L5_PF.G1 (5-0)
+makeAPFC DEBUG: P_other_side = 30.537262874139977 --> component for: L5_PT.G1
+makeAPFC DEBUG: inflow: E3.G3 = 59.46273712586018, CP = 59.46273712586002 --> component for: L5_PF.G3 (5-0)
+makeAPFC DEBUG: P_other_side = 59.46273712586002 --> component for: L5_PT.G3
+makeAPFC DEBUG: Processing bus k = 7
+makeAPFC DEBUG: B[7]: ['E5', 'E6'], [24.095417457392525, 75.90458254260807], ['PT', 'PT'], [1, 1], sum(P) = 100.0000000000006
+makeAPFC DEBUG: A[7]: ['L7'], [100.0], ['PF'], [1], sum(P) = 100.0
+makeAPFC DEBUG: outflow: L7_PF (7-0)
+makeAPFC DEBUG: f = 100.0/100.0000000000006 = 0.999999999999994
+makeAPFC DEBUG: inflow: E6.G2 = 75.90458254260807, CP = 75.90458254260761 --> component for: L7_PF.G2 (7-0)
+makeAPFC DEBUG: P_other_side = 75.90458254260761 --> component for: L7_PT.G2
+makeAPFC DEBUG: inflow: E5.G3 = 24.095417457392525, CP = 24.09541745739238 --> component for: L7_PF.G3 (7-0)
+makeAPFC DEBUG: P_other_side = 24.09541745739238 --> component for: L7_PT.G3
+makeAPFC INFO: iter = 2, time = 0.000
+makeAPFC INFO: total time = 0.005
+makeAPFC INFO: APFC: nr = 30, iters = 2, DONE = True
+makeAPFC INFO: End of calculations
+
+components INFO: Calculate reactive power flow components
+makeRPFC INFO: Starting ...
+makeReactiveFlows INFO: Swap branch orientation when both QF and QT are negative (2)
+makeReactiveFlows DEBUG: Before swap
+   F_BUS  T_BUS      QF      QT    QSF   QST  TAP
+3      3      6 -10.860 -14.955  0.000  0.00  1.0
+8      9      4 -38.687 -22.893  8.723  9.26  1.0
+makeReactiveFlows DEBUG: After swap
+   F_BUS  T_BUS      QF      QT   QSF    QST  TAP
+3      6      3  14.955  10.860  0.00  0.000  1.0
+8      4      9  22.893  38.687  9.26  8.723  1.0
+makeReactiveFlows INFO: Generators with negative power converted to loads (1)
+makeReactiveFlows DEBUG: Generators with negative power converted to loads
+   F_BUS  T_BUS     QT TYPE  ID     QF    QF1    QT1  QSF  QST  TAP
+2      3      0  10.86    L  G3  10.86  10.86  10.86    0    0    1
+makeReactiveFlows INFO: Branches that are receiving reactive powers from both ends converted to loads (1)
+makeReactiveFlows DEBUG: Branches that are receiving reactive powers from both ends converted to loads
+   F_BUS  T_BUS     QF    QF1    QT1     QT  QSF  QST  TAP TYPE  ID
+6      8      2  9.178  9.178 -6.654 -6.654  0.0  0.0  1.0    E  E7
+makeReactiveFlows DEBUG: Loads from branches that are receiving reactive powers from both ends
+   F_BUS  T_BUS     QF     ID     QT    QF1    QT1  QSF  QST TYPE  TAP
+0      8      0  9.178  E7_QF  9.178  9.178  9.178    0    0    L    1
+1      2      0  6.654  E7_QT  6.654  6.654  6.654    0    0    L    1
+makeRPFC DEBUG: =============== Sets C and D ===============
+makeRPFC DEBUG: C[1] = {'E1': {'Q': 27.045923533491962, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[1] = {'G1': {'Q': 27.045923533491987, 'side': 'QT', 'sign': 1}}
+
+makeRPFC DEBUG: C[2] = {'E7_QT': {'Q': 6.653660318427704, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[2] = {'G2': {'Q': 6.653660318427683, 'side': 'QT', 'sign': 1}}
+
+makeRPFC DEBUG: C[3] = {'G3': {'Q': 10.859709070988515, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[3] = {'E4': {'Q': 10.859709070988494, 'side': 'QT', 'sign': 1}}
+
+makeRPFC DEBUG: C[4] = {'E2': {'Q': 1.0300063738839647, 'side': 'QF', 'sign': 1}, 'E9': {'Q': 22.89312062474635, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[4] = {'E1': {'Q': 23.9231269986292, 'side': 'QT', 'sign': 1}}
+
+makeRPFC DEBUG: C[5] = {'L5': {'Q': 30.0, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[5] = {'E2': {'Q': 16.54336524376037, 'side': 'QT', 'sign': 1}, 'E3': {'Q': 13.456634756239449, 'side': 'QF', 'sign': -1}}
+
+makeRPFC DEBUG: C[6] = {'E4': {'Q': 14.955327300831122, 'side': 'QF', 'sign': 1}, 'E5': {'Q': 3.119508418063608, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[6] = {'E3': {'Q': 18.074835718895816, 'side': 'QT', 'sign': 1}}
+
+makeRPFC DEBUG: C[7] = {'L7': {'Q': 35.0, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[7] = {'E5': {'Q': 24.29582261168452, 'side': 'QT', 'sign': 1}, 'E6': {'Q': 10.704177388314703, 'side': 'QF', 'sign': -1}}
+
+makeRPFC DEBUG: C[8] = {'E7_QF': {'Q': 9.178148840188022, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[8] = {'E6': {'Q': 0.7973314422492093, 'side': 'QT', 'sign': 1}, 'E8': {'Q': 8.380817397938344, 'side': 'QF', 'sign': -1}}
+
+makeRPFC DEBUG: C[9] = {'L9': {'Q': 50.0, 'side': 'QF', 'sign': 1}}
+makeRPFC DEBUG: D[9] = {'E8': {'Q': 11.312751170505567, 'side': 'QT', 'sign': 1}, 'E9': {'Q': 38.68724882949278, 'side': 'QT', 'sign': 1}}
+
+makeRPFC DEBUG: =======================================================
+makeRPFC DEBUG: Initial known components: ['G1', 'G2']
+makeRPFC DEBUG: Initial known components: E3 (5-6) (inserts reactive power at both ends)
+makeRPFC DEBUG: Initial known components: E6 (7-8) (inserts reactive power at both ends)
+makeRPFC DEBUG: Initial known components: E8 (8-9) (inserts reactive power at both ends)
+makeRPFC DEBUG: ========== Start of iteration 1 ==========
+makeRPFC DEBUG: Processing bus k = 1
+makeRPFC DEBUG: D[1]: ['G1'], [27.045923533491987], ['QT'], [1], sum(Q) = 27.045923533491987
+makeRPFC DEBUG: C[1]: ['E1'], [27.045923533491962], ['QF'], [1], sum(Q) = 27.045923533491962
+makeRPFC DEBUG: outflow: E1_QF (1-4)
+makeRPFC DEBUG: f = 27.045923533491962/27.045923533491987 = 0.9999999999999991
+makeRPFC DEBUG: inflow: G1.G1 = 27.045923533491987, CQ = 27.045923533491962 --> component for: E1_QF.G1 (1-4)
+makeRPFC DEBUG: CQ_other_side = 23.9231269986292 --> component for: E1_QT.G1
+makeRPFC DEBUG: Components due to shunt elements of branch E1 (1-4)
+makeRPFC DEBUG: QS = 0.0 (side: QF), QS_other_side = 0.0 (side: QT)
+makeRPFC DEBUG: Q1 = 27.045923533491962 (side: QF), Q1_other_side = 23.9231269986292 (side: QT)
+makeRPFC DEBUG: h = 23.9231269986292/27.045923533491962 = 0.8845372563818836
+makeRPFC DEBUG: Qh = 0.8845372563818836 * 0.0 + 0.0 = 0.0 --> component for: E1_QT.E1
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG: Processing bus k = 2
+makeRPFC DEBUG: D[2]: ['G2'], [6.653660318427683], ['QT'], [1], sum(Q) = 6.653660318427683
+makeRPFC DEBUG: C[2]: ['E7_QT'], [6.653660318427704], ['QF'], [1], sum(Q) = 6.653660318427704
+makeRPFC DEBUG: outflow: E7_QT_QF (2-0)
+makeRPFC DEBUG: f = 6.653660318427704/6.653660318427683 = 1.000000000000003
+makeRPFC DEBUG: inflow: G2.G2 = 6.653660318427683, CQ = 6.653660318427703 --> component for: E7_QT_QF.G2 (2-0)
+makeRPFC DEBUG: CQ_other_side = 6.653660318427703 --> component for: E7_QT_QT.G2
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG: Processing bus k = 3
+makeRPFC DEBUG:     not all RPFC known, skipping ...
+makeRPFC DEBUG: Processing bus k = 4
+makeRPFC DEBUG: D[4]: ['E1'], [23.9231269986292], ['QT'], [1], sum(Q) = 23.9231269986292
+makeRPFC DEBUG: C[4]: ['E2', 'E9'], [1.0300063738839647, 22.89312062474635], ['QF', 'QF'], [1, 1], sum(Q) = 23.923126998630313
+makeRPFC DEBUG: outflow: E2_QF (4-5)
+makeRPFC DEBUG: f = 1.0300063738839647/23.9231269986292 = 0.043054838689899705
+makeRPFC DEBUG: inflow: E1.G1 = 23.9231269986292, CQ = 1.0300063738839647 --> component for: E2_QF.G1 (4-5)
+makeRPFC DEBUG: CQ_other_side = 0.9307229072876989 --> component for: E2_QT.G1
+makeRPFC DEBUG: Components due to shunt elements of branch E2 (4-5)
+makeRPFC DEBUG: QS = 8.312710432458635 (side: QF), QS_other_side = 8.10120336162 (side: QT)
+makeRPFC DEBUG: Q1 = 9.3427168063426 (side: QF), Q1_other_side = 8.44216188214037 (side: QT)
+makeRPFC DEBUG: h = 8.44216188214037/9.3427168063426 = 0.9036088813490677
+makeRPFC DEBUG: Qh = 0.9036088813490677 * 8.312710432458635 + 8.10120336162 = 15.612642336472671 --> component for: E2_QT.E2
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG: outflow: E9_QF (4-9)
+makeRPFC DEBUG: f = 22.89312062474635/23.9231269986292 = 0.9569451613101468
+makeRPFC DEBUG: inflow: E1.G1 = 23.9231269986292, CQ = 22.89312062474635 --> component for: E9_QF.G1 (4-9)
+makeRPFC DEBUG: CQ_other_side = 21.334624598734067 --> component for: E9_QT.G1
+makeRPFC DEBUG: Components due to shunt elements of branch E9 (4-9)
+makeRPFC DEBUG: QS = 9.259728076662782 (side: QF), QS_other_side = 8.723271088382258 (side: QT)
+makeRPFC DEBUG: Q1 = 32.15284870140913 (side: QF), Q1_other_side = 29.963977741110522 (side: QT)
+makeRPFC DEBUG: h = 29.963977741110522/32.15284870140913 = 0.9319229539931038
+makeRPFC DEBUG: Qh = 0.9319229539931038 * 9.259728076662782 + 8.723271088382258 = 17.35262423075872 --> component for: E9_QT.E9
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG: Processing bus k = 5
+makeRPFC DEBUG: D[5]: ['E2', 'E3'], [16.54336524376037, 13.456634756239449], ['QT', 'QF'], [1, -1], sum(Q) = 29.99999999999982
+makeRPFC DEBUG: C[5]: ['L5'], [30.0], ['QF'], [1], sum(Q) = 30.0
+makeRPFC DEBUG: outflow: L5_QF (5-0)
+makeRPFC DEBUG: f = 30.0/29.99999999999982 = 1.000000000000006
+makeRPFC DEBUG: inflow: E2.G1 = 0.9307229072876989, CQ = 0.9307229072877045 --> component for: L5_QF.G1 (5-0)
+makeRPFC DEBUG: CQ_other_side = 0.9307229072877045 --> component for: L5_QT.G1
+makeRPFC DEBUG: inflow: E2.E2 = 15.612642336472671, CQ = 15.612642336472765 --> component for: L5_QF.E2 (5-0)
+makeRPFC DEBUG: CQ_other_side = 15.612642336472765 --> component for: L5_QT.E2
+makeRPFC DEBUG: inflow: E3.E3 = -13.456634756239449, CQ = 13.456634756239529 --> component for: L5_QF.E3 (5-0)
+makeRPFC DEBUG: CQ_other_side = 13.456634756239529 --> component for: L5_QT.E3
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG:     known components L5 (5-0)
+makeRPFC DEBUG: Processing bus k = 6
+makeRPFC DEBUG: D[6]: ['E3'], [18.074835718895816], ['QT'], [1], sum(Q) = 18.074835718895816
+makeRPFC DEBUG: C[6]: ['E4', 'E5'], [14.955327300831122, 3.119508418063608], ['QF', 'QF'], [1, 1], sum(Q) = 18.07483571889473
+makeRPFC DEBUG: outflow: E4_QF (6-3)
+makeRPFC DEBUG: f = 14.955327300831122/18.074835718895816 = 0.8274115202716065
+makeRPFC DEBUG: inflow: E3.E3 = 18.074835718895816, CQ = 14.955327300831122 --> component for: E4_QF.E3 (6-3)
+makeRPFC DEBUG: CQ_other_side = 10.859709070988494 --> component for: E4_QT.E3
+makeRPFC DEBUG: Components due to shunt elements of branch E4 (6-3)
+makeRPFC DEBUG: QS = 0.0 (side: QF), QS_other_side = 0.0 (side: QT)
+makeRPFC DEBUG: Q1 = 14.955327300831122 (side: QF), Q1_other_side = 10.859709070988494 (side: QT)
+makeRPFC DEBUG: h = 10.859709070988494/14.955327300831122 = 0.7261431898173824
+makeRPFC DEBUG: Qh = 0.7261431898173824 * 0.0 + 0.0 = 0.0 --> component for: E4_QT.E4
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG:     known components L5 (5-0)
+makeRPFC DEBUG:     known components E4 (6-3)
+makeRPFC DEBUG: outflow: E5_QF (6-7)
+makeRPFC DEBUG: f = 3.119508418063608/18.074835718895816 = 0.17258847972833344
+makeRPFC DEBUG: inflow: E3.E3 = 18.074835718895816, CQ = 3.119508418063608 --> component for: E5_QF.E3 (6-7)
+makeRPFC DEBUG: CQ_other_side = 2.9564103626707974 --> component for: E5_QT.E3
+makeRPFC DEBUG: Components due to shunt elements of branch E5 (6-7)
+makeRPFC DEBUG: QS = 11.137114788230106 (side: QF), QS_other_side = 10.784582077849782 (side: QT)
+makeRPFC DEBUG: Q1 = 14.256623206293714 (side: QF), Q1_other_side = 13.511240533834739 (side: QT)
+makeRPFC DEBUG: h = 13.511240533834739/14.256623206293714 = 0.9477167445843754
+makeRPFC DEBUG: Qh = 0.9477167445843754 * 11.137114788230106 + 10.784582077849782 = 21.339412249013723 --> component for: E5_QT.E5
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG:     known components L5 (5-0)
+makeRPFC DEBUG:     known components E4 (6-3)
+makeRPFC DEBUG:     known components E5 (6-7)
+makeRPFC DEBUG: Processing bus k = 7
+makeRPFC DEBUG: D[7]: ['E5', 'E6'], [24.29582261168452, 10.704177388314703], ['QT', 'QF'], [1, -1], sum(Q) = 34.999999999999226
+makeRPFC DEBUG: C[7]: ['L7'], [35.0], ['QF'], [1], sum(Q) = 35.0
+makeRPFC DEBUG: outflow: L7_QF (7-0)
+makeRPFC DEBUG: f = 35.0/34.999999999999226 = 1.0000000000000222
+makeRPFC DEBUG: inflow: E5.E3 = 2.9564103626707974, CQ = 2.956410362670863 --> component for: L7_QF.E3 (7-0)
+makeRPFC DEBUG: CQ_other_side = 2.956410362670863 --> component for: L7_QT.E3
+makeRPFC DEBUG: inflow: E5.E5 = 21.339412249013723, CQ = 21.339412249014195 --> component for: L7_QF.E5 (7-0)
+makeRPFC DEBUG: CQ_other_side = 21.339412249014195 --> component for: L7_QT.E5
+makeRPFC DEBUG: inflow: E6.E6 = -10.704177388314703, CQ = 10.70417738831494 --> component for: L7_QF.E6 (7-0)
+makeRPFC DEBUG: CQ_other_side = 10.70417738831494 --> component for: L7_QT.E6
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG:     known components L5 (5-0)
+makeRPFC DEBUG:     known components E4 (6-3)
+makeRPFC DEBUG:     known components E5 (6-7)
+makeRPFC DEBUG:     known components L7 (7-0)
+makeRPFC DEBUG: Processing bus k = 8
+makeRPFC DEBUG: D[8]: ['E6', 'E8'], [0.7973314422492093, 8.380817397938344], ['QT', 'QF'], [1, -1], sum(Q) = 9.178148840187554
+makeRPFC DEBUG: C[8]: ['E7_QF'], [9.178148840188022], ['QF'], [1], sum(Q) = 9.178148840188022
+makeRPFC DEBUG: outflow: E7_QF_QF (8-0)
+makeRPFC DEBUG: f = 9.178148840188022/9.178148840187554 = 1.000000000000051
+makeRPFC DEBUG: inflow: E6.E6 = 0.7973314422492093, CQ = 0.79733144224925 --> component for: E7_QF_QF.E6 (8-0)
+makeRPFC DEBUG: CQ_other_side = 0.79733144224925 --> component for: E7_QF_QT.E6
+makeRPFC DEBUG: inflow: E8.E8 = -8.380817397938344, CQ = 8.380817397938772 --> component for: E7_QF_QF.E8 (8-0)
+makeRPFC DEBUG: CQ_other_side = 8.380817397938772 --> component for: E7_QF_QT.E8
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG:     known components L5 (5-0)
+makeRPFC DEBUG:     known components E4 (6-3)
+makeRPFC DEBUG:     known components E5 (6-7)
+makeRPFC DEBUG:     known components L7 (7-0)
+makeRPFC DEBUG:     known components E7_QF (8-0)
+makeRPFC DEBUG: Processing bus k = 9
+makeRPFC DEBUG: D[9]: ['E8', 'E9'], [11.312751170505567, 38.68724882949278], ['QT', 'QT'], [1, 1], sum(Q) = 49.99999999999835
+makeRPFC DEBUG: C[9]: ['L9'], [50.0], ['QF'], [1], sum(Q) = 50.0
+makeRPFC DEBUG: outflow: L9_QF (9-0)
+makeRPFC DEBUG: f = 50.0/49.99999999999835 = 1.0000000000000329
+makeRPFC DEBUG: inflow: E9.G1 = 21.334624598734067, CQ = 21.334624598734766 --> component for: L9_QF.G1 (9-0)
+makeRPFC DEBUG: CQ_other_side = 21.334624598734766 --> component for: L9_QT.G1
+makeRPFC DEBUG: inflow: E8.E8 = 11.312751170505567, CQ = 11.312751170505939 --> component for: L9_QF.E8 (9-0)
+makeRPFC DEBUG: CQ_other_side = 11.312751170505939 --> component for: L9_QT.E8
+makeRPFC DEBUG: inflow: E9.E9 = 17.35262423075872, CQ = 17.352624230759293 --> component for: L9_QF.E9 (9-0)
+makeRPFC DEBUG: CQ_other_side = 17.352624230759293 --> component for: L9_QT.E9
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG:     known components L5 (5-0)
+makeRPFC DEBUG:     known components E4 (6-3)
+makeRPFC DEBUG:     known components E5 (6-7)
+makeRPFC DEBUG:     known components L7 (7-0)
+makeRPFC DEBUG:     known components E7_QF (8-0)
+makeRPFC DEBUG:     known components L9 (9-0)
+makeRPFC INFO: iter = 1, time = 0.008
+makeRPFC DEBUG: ========== Start of iteration 2 ==========
+makeRPFC DEBUG: Processing bus k = 3
+makeRPFC DEBUG: D[3]: ['E4'], [10.859709070988494], ['QT'], [1], sum(Q) = 10.859709070988494
+makeRPFC DEBUG: C[3]: ['G3'], [10.859709070988515], ['QF'], [1], sum(Q) = 10.859709070988515
+makeRPFC DEBUG: outflow: G3_QF (3-0)
+makeRPFC DEBUG: f = 10.859709070988515/10.859709070988494 = 1.000000000000002
+makeRPFC DEBUG: inflow: E4.E3 = 10.859709070988494, CQ = 10.859709070988515 --> component for: G3_QF.E3 (3-0)
+makeRPFC DEBUG: CQ_other_side = 10.859709070988515 --> component for: G3_QT.E3
+makeRPFC DEBUG:     known components G1 (0-1)
+makeRPFC DEBUG:     known components G2 (0-2)
+makeRPFC DEBUG:     known components E3 (5-6)
+makeRPFC DEBUG:     known components E6 (7-8)
+makeRPFC DEBUG:     known components E8 (8-9)
+makeRPFC DEBUG:     known components E1 (1-4)
+makeRPFC DEBUG:     known components E7_QT (2-0)
+makeRPFC DEBUG:     known components E2 (4-5)
+makeRPFC DEBUG:     known components E9 (4-9)
+makeRPFC DEBUG:     known components L5 (5-0)
+makeRPFC DEBUG:     known components E4 (6-3)
+makeRPFC DEBUG:     known components E5 (6-7)
+makeRPFC DEBUG:     known components L7 (7-0)
+makeRPFC DEBUG:     known components E7_QF (8-0)
+makeRPFC DEBUG:     known components L9 (9-0)
+makeRPFC DEBUG:     known components G3 (3-0)
+makeRPFC INFO: iter = 2, time = 0.001
+makeRPFC INFO: total time = 0.011
+makeRPFC INFO: RPFC: nr = 32, iters = 2, DONE = True
+makeRPFC INFO: End of calculations
+
+components INFO: Save the results
