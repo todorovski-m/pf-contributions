@@ -32,6 +32,11 @@ contributions run the following command
 
 `python power_components.py -c case1`
 
+The components of active power losses (kW) in each branch can be obtained with
+the following command, which generates table 4
+
+`python losses_components.py -c case1`
+
 |         ![ ](./images/small_system.png)          |
 | :----------------------------------------------: |
 | Fig. 1. Single-line diagram of the simple system |
