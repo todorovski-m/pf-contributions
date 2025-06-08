@@ -9,6 +9,8 @@ calculate network power losses associated to every source-to-load pair,
 as well as power losses in the network attributed to any specific load
 or any source.
 
+[Go to full paper](https://www.sciencedirect.com/science/article/abs/pii/S0378779624003213)
+
 # Install
 
 In the code we perform power flow computation using
